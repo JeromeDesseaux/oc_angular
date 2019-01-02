@@ -1,0 +1,23 @@
+<div class="my-5" [ngClass]="{'positive': post.loveIts>0, 'negative': post.loveIts<0}">
+  <div class="row">
+      
+      <div class="float-left col-6">
+        <h1>
+            {{ post.title }} 
+        </h1>
+      </div>
+
+      <div class="float-right col-6 text-right">
+        <h4>
+          {{ post.created_at | date:"short" }}
+        </h4>
+      </div>
+      <div class="col-12">
+        <p>{{ post.content }}</p>
+      </div>
+  </div>
+  <div class="my-2">
+    <a class="btn btn-success" (click)="loveIt()">Love it!</a>
+    <a class="btn btn-danger" (click)="hateIt()">Hate it!</a>
+  </div>
+</div>
