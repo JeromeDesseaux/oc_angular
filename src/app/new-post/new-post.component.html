@@ -1,0 +1,15 @@
+<h2>Créer un nouveau post</h2>
+<br>
+<div class="col-sm-8 col-sm-offset-2">
+    <form [formGroup]="postForm" (ngSubmit)="onSubmitForm()">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" id="title" class="form-control" formControlName="title">
+      </div>
+      <div class="form-group">
+        <label for="content">Contenu</label>
+        <textarea id="content" class="form-control" formControlName="content" cols="30" rows="10"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Créer</button>
+    </form>
+  </div>
